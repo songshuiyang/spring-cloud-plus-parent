@@ -4,14 +4,16 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.songsy.springcloud.plus</groupId>
-	<artifactId>parent</artifactId>
+	<artifactId>cloud-parent</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 
 	<modules>
-		<module>zuul</module>
-		<module>user</module>
+		<module>cloud-zuul</module>
+		<module>cloud-user</module>
+		<module>cloud-common</module>
+		<module>cloud-entity</module>
 	</modules>
 
 	<parent>
@@ -23,11 +25,6 @@
 
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-consul-discovery</artifactId>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -45,14 +42,24 @@
 	<dependencyManagement>
 		<dependencies>
 
-
-
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
 				<version>Edgware.SR2</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.songsy.springcloud.plus</groupId>
+				<artifactId>cloud-common</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.songsy.springcloud.plus</groupId>
+				<artifactId>cloud-entity</artifactId>
+				<version>1.0-SNAPSHOT</version>
 			</dependency>
 
 		</dependencies>
