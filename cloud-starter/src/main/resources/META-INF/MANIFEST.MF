@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: Spring Cloud Netflix Core
+Implementation-Version: 1.4.3.RELEASE
+Archiver-Version: Plexus Archiver
+Built-By: jenkins
+Implementation-Vendor-Id: org.springframework.cloud
+Created-By: Apache Maven 3.5.0
+Build-Jdk: 1.8.0_144
+Implementation-URL: https://spring.io/spring-cloud/spring-cloud-netfli
+ x/spring-cloud-netflix-core
+Implementation-Vendor: Pivotal Software, Inc.
+

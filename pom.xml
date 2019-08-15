@@ -8,12 +8,12 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-
 	<modules>
 		<module>cloud-zuul</module>
 		<module>cloud-user</module>
 		<module>cloud-common</module>
 		<module>cloud-entity</module>
+		<module>cloud-starter</module>
 	</modules>
 
 	<parent>
@@ -61,6 +61,13 @@
 				<artifactId>cloud-entity</artifactId>
 				<version>1.0-SNAPSHOT</version>
 			</dependency>
+
+			<dependency>
+				<groupId>com.songsy.springcloud.plus</groupId>
+				<artifactId>cloud-starter</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</dependency>
+
 
 		</dependencies>
 	</dependencyManagement>

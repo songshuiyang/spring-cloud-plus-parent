@@ -12,3 +12,6 @@ server:
 logging:
   level:
     ROOT: DEBUG
+management:
+  security:
+    enabled: false

@@ -1,0 +1,10 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "org.springframework.cloud.netflix.zuul.RoutesEndpoint",
+      "name": "endpoints.routes",
+      "type": "org.springframework.cloud.netflix.zuul.RoutesEndpoint"
+    }
+  ]
+}
