@@ -1,8 +1,13 @@
 package com.songsy.springcloud.plus.starter;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 测试自动配置类
@@ -14,39 +19,20 @@ import org.springframework.context.annotation.Configuration;
 @ConditionalOnBean(CloudMarkerConfiguration.Marker.class)
 public class CloudAutoConfiguration {
 
-    @Bean
-    public AutoConfiguration1 testAutoConfiguration1 () {
-        return new AutoConfiguration1();
-    }
+    @RestController
+    @RequestMapping("/system")
+    class SystemController {
 
-    @Bean
-    public AutoConfiguration2 testAutoConfiguration2 () {
-        return new AutoConfiguration2();
-    }
-
-    class AutoConfiguration1 {
-
-        private String beanName = "AutoConfiguration1";
-
-        public String getBeanName() {
-            return beanName;
+        @GetMapping("/info")
+        public Map<String, Object> getInfo() {
+            Map<String, Object> objectMap = new HashMap<String, Object>(8);
+            objectMap.put("appName","spring-cloud-plus-parent");
+            objectMap.put("groupId","com.songsy.springcloud.plus");
+            objectMap.put("artifactId","cloud-parent");
+            objectMap.put("version","1.0-SNAPSHOT");
+            objectMap.put("currentTimeMillis",System.currentTimeMillis());
+            return objectMap;
         }
 
-        public void setBeanName(String beanName) {
-            this.beanName = beanName;
-        }
-    }
-
-    class AutoConfiguration2 {
-
-        private String beanName = "AutoConfiguration2";
-
-        public String getBeanName() {
-            return beanName;
-        }
-
-        public void setBeanName(String beanName) {
-            this.beanName = beanName;
-        }
     }
 }
