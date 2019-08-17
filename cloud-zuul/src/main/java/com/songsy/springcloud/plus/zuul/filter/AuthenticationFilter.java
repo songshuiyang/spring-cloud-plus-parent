@@ -99,7 +99,7 @@ public class AuthenticationFilter extends ZuulFilter {
         log.info("<< 鉴权失败[{}]",relativeURL);
     }
 
-    private static String convertToString(ResponseMO resMO) {
+    private String convertToString(ResponseMO resMO) {
         String result = "";
         ObjectMapper mapper = new ObjectMapper();
         try {
