@@ -1,4 +1,4 @@
-package com.songsy.springcloud.plus.zuul.test;
+package com.songsy.springcloud.plus.user.test;
 
 import junit.framework.TestCase;
 
