@@ -11,6 +11,7 @@
 	<modules>
 		<module>cloud-zuul</module>
 		<module>cloud-user</module>
+		<module>cloud-sso</module>
 		<module>cloud-common</module>
 		<module>cloud-entity</module>
 		<module>cloud-starter</module>
