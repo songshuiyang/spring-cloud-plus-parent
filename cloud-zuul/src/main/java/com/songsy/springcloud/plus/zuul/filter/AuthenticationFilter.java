@@ -6,7 +6,9 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.songsy.springcloud.plus.common.constant.ApplicationConstants;
 import com.songsy.springcloud.plus.common.mo.ResponseMO;
+import com.songsy.springcloud.plus.zuul.client.SsoClient;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
@@ -23,6 +25,9 @@ import java.util.regex.Pattern;
 @Component
 public class AuthenticationFilter extends ZuulFilter {
 
+    @Autowired
+    private SsoClient ssoClient;
+
     private Pattern p = Pattern.compile("/*/pub/*");
 
     @Override
@@ -38,11 +43,9 @@ public class AuthenticationFilter extends ZuulFilter {
         log.info(">> 鉴权开始[{}]",relativeURL);
         ResponseMO resModel = null;
         if (relativeURL.startsWith(ApplicationConstants.APPLICATION_USER)) {
-            // TODO
-            resModel = new ResponseMO();
+            resModel = ssoClient.checkToken();
         } else if (relativeURL.startsWith(ApplicationConstants.APPLICATION_ZUUL)) {
-            // TODO
-            resModel = new ResponseMO();
+            resModel = ssoClient.checkToken();
         } else {
             // 其他服务不对其进行路由
             authorizationFailed(relativeURL, ctx, resMO);

@@ -7,6 +7,14 @@ spring:
       port: 8500
       discovery:
         prefer-ip-address: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    pool:
+      maxIdle: 50 #最大空闲连接池
+      maxTotal: 30000 #最大连接数
+      maxActive: 500 #连接池最大连接数
 server:
   port: 2020
 logging:
