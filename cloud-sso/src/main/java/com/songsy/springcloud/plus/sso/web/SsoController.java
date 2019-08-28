@@ -17,11 +17,11 @@ public class SsoController extends BaseController {
 
     @RequestMapping(value = "/createToken", method = RequestMethod.POST)
     public ResponseMO createToken() {
-        return ResponseUtil.success("F34HB23V234HV234J2H34BJK234JK234B23JK4B2K34BJK2B3K4J23JK");
+        return ResponseUtil.successWithData("F34HB23V234HV234J2H34BJK234JK234B23JK4B2K34BJK2B3K4J23JK");
     }
 
     @RequestMapping(value = "/checkToken", method = RequestMethod.POST)
     public ResponseMO checkToken() {
-        return ResponseUtil.success();
+        return ResponseUtil.successWithData("");
     }
 }

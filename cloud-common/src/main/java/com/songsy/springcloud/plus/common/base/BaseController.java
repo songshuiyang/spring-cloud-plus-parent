@@ -24,7 +24,7 @@ public abstract class BaseController {
     }
 
     protected ResponseMO success(Object obj) {
-        return ResponseUtil.successWithData("", obj);
+        return ResponseUtil.successWithData(obj);
     }
 
     protected ResponseMO success(Object obj, String msg) {

@@ -42,10 +42,14 @@ public class AuthenticationFilter extends ZuulFilter {
         }
         log.info(">> 鉴权开始[{}]",relativeURL);
         ResponseMO resModel = null;
-        if (relativeURL.startsWith(ApplicationConstants.APPLICATION_USER)) {
+
+        if (relativeURL.startsWith(ApplicationConstants.APPLICATION_ZUUL)) {
             // resModel = ssoClient.checkToken();
             resModel = new ResponseMO();
-        } else if (relativeURL.startsWith(ApplicationConstants.APPLICATION_ZUUL)) {
+        } else if (relativeURL.startsWith(ApplicationConstants.APPLICATION_USER)) {
+            // resModel = ssoClient.checkToken();
+            resModel = new ResponseMO();
+        } else if (relativeURL.startsWith(ApplicationConstants.APPLICATION_SSO)) {
             // resModel = ssoClient.checkToken();
             resModel = new ResponseMO();
         } else {
