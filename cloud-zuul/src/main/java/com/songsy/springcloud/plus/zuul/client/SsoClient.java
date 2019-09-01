@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(value = "cloudSso")
 public interface SsoClient {
 
-    @RequestMapping(value = "/createToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/sso/createToken", method = RequestMethod.POST)
     ResponseMO createToken();
 
-    @RequestMapping(value = "/checkToken", method = RequestMethod.POST)
+    @RequestMapping(value = "/sso/checkToken", method = RequestMethod.POST)
     ResponseMO checkToken();
 
 }

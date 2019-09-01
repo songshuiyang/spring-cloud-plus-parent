@@ -50,7 +50,7 @@ public class AuthenticationFilter extends ZuulFilter {
             // resModel = ssoClient.checkToken();
             resModel = new ResponseMO();
         } else if (relativeURL.startsWith(ApplicationConstants.APPLICATION_SSO)) {
-            // resModel = ssoClient.checkToken();
+             resModel = ssoClient.checkToken();
             resModel = new ResponseMO();
         } else {
             // 其他服务不对其进行路由
