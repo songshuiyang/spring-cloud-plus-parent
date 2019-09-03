@@ -1,14 +1,14 @@
 package com.songsy.springcloud.plus.user;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 /**
  * @author songsy
  * @date 2019/8/14 17:43
  */
+@EnableFeignClients
 @SpringCloudApplication
 public class UserApplication {
 
