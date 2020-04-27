@@ -1,4 +1,4 @@
-package com.songsy.springcloud.plus.user;
+package com.songsy.springcloud.plus.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;

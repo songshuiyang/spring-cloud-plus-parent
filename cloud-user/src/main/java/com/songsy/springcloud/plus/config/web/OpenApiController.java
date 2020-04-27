@@ -1,7 +1,7 @@
-package com.songsy.springcloud.plus.user.web;
+package com.songsy.springcloud.plus.config.web;
 
 import com.songsy.springcloud.plus.common.mo.ResponseMO;
-import com.songsy.springcloud.plus.user.client.OpenApiClient;
+import com.songsy.springcloud.plus.config.client.OpenApiClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

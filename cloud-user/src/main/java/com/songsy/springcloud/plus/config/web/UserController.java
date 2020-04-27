@@ -1,4 +1,4 @@
-package com.songsy.springcloud.plus.user.web;
+package com.songsy.springcloud.plus.config.web;
 
 import com.songsy.springcloud.plus.common.base.BaseController;
 import com.songsy.springcloud.plus.common.mo.ResponseMO;
@@ -23,4 +23,6 @@ public class UserController extends BaseController {
         userDO.setMobile("10086");
         return success(userDO);
     }
+
+
 }

@@ -1,4 +1,4 @@
-package com.songsy.springcloud.plus.user.client;
+package com.songsy.springcloud.plus.config.client;
 
 import com.songsy.springcloud.plus.common.mo.ResponseMO;
 import org.springframework.cloud.netflix.feign.FeignClient;

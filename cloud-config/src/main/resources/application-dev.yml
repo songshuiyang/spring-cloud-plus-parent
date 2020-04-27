@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: cloudConfig
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        prefer-ip-address: true
+    config:
+      server:
+        default-label: dev
+        jdbc:
+          sql: SELECT akey , avalue FROM config_server where APPLICATION=? and APROFILE=? and LABEL=?
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/config
+    username: root
+    password: root
+server:
+  port: 2010
+logging:
+  level:
+    ROOT: DEBUG
