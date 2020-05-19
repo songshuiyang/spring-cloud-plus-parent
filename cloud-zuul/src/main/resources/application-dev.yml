@@ -7,11 +7,13 @@ spring:
       port: 8500
       discovery:
         prefer-ip-address: true
+  zipkin:
+    base-url: http://localhost:2020
 server:
   port: 2000
 logging:
   level:
-    ROOT: DEBUG
+    ROOT: INFO
 management:
   security:
     enabled: false

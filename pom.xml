@@ -10,6 +10,7 @@
 
 	<modules>
 		<module>cloud-zuul</module>
+		<module>cloud-zipkin</module>
 		<module>cloud-user</module>
 		<module>cloud-sso</module>
 		<module>cloud-common</module>
@@ -38,6 +39,12 @@
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
 	</dependencies>
 
 	<dependencyManagement>

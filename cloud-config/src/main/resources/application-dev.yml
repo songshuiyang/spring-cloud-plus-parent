@@ -21,4 +21,4 @@ server:
   port: 2010
 logging:
   level:
-    ROOT: DEBUG
+    ROOT: INFO
